@@ -1,0 +1,192 @@
+:root {
+    --gryffindor: #7f0909;
+    --slytherin: #0d4d2b;
+    --ravenclaw: #0e1a40;
+    --hufflepuff: #ecb939;
+    --gold: #f5d76e;
+}
+
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(180deg, var(--ravenclaw), #1b1b2f);
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #0b0b1a;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.6rem;
+    color: var(--gold);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu li {
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.menu li:hover {
+    color: var(--gold);
+    transform: scale(1.1);
+}
+
+/* SECCIONES */
+.section {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: var(--gold);
+}
+
+/* INTRO */
+.intro {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.intro-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.intro img {
+    width: 50%;
+    border-radius: 20px;
+    animation: float 5s infinite ease-in-out;
+}
+
+/* CASAS */
+.houses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.house {
+    padding: 30px;
+    font-size: 1.4rem;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: transform 0.4s;
+}
+
+.house:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.gryffindor {
+    background: var(--gryffindor);
+    color: var(--gold);
+}
+
+.slytherin {
+    background: var(--slytherin);
+    color: #cfd8dc;
+}
+
+.ravenclaw {
+    background: var(--ravenclaw);
+    color: var(--gold);
+}
+
+.hufflepuff {
+    background: var(--hufflepuff);
+    color: black;
+}
+
+/* VIDEO */
+video {
+    width: 70%;
+    max-width: 550px;
+    border-radius: 20px;
+}
+
+/* MAGIA */
+.magic {
+    background: linear-gradient(180deg, #15152b, #0b0b1a);
+}
+
+.wand-area {
+    position: relative;
+    height: 200px;
+}
+
+#wand {
+    width: 6px;
+    height: 150px;
+    background: #8b5a2b;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.spell-btn {
+    margin-top: 30px;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    background: var(--gold);
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.spell-btn:hover {
+    background: #ffd700;
+}
+
+/* CHISPAS */
+.spark {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: gold;
+    border-radius: 50%;
+    animation: spark 1s forwards;
+}
+
+/* ANIMACIONES */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes spark {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: translate(calc(-50px + 100px * var(--x)),
+                calc(-50px + 100px * var(--y))) scale(0);
+    }
+}

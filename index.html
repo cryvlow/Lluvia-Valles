@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hogwarts | Mundo Mágico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/Style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">⚡ Hogwarts</div>
+        <ul class="menu">
+            <li onclick="scrollToSection('inicio')">Inicio</li>
+            <li onclick="scrollToSection('casas')">Casas</li>
+            <li onclick="scrollToSection('video')">Video</li>
+            <li onclick="scrollToSection('magia')">Magia</li>
+        </ul>
+    </nav>
+
+    <!-- INICIO -->
+    <section id="inicio" class="section intro">
+        <div class="intro-text">
+            <h1>Bienvenido al Mundo Mágico</h1>
+            <p>
+                Hogwarts es el lugar donde la magia cobra vida.
+                Descubre las casas, los hechizos y la esencia del universo de Harry Potter.
+            </p>
+        </div>
+        <img src="./assets/Castillo.jpg" alt="Hogwarts">
+    </section>
+
+    <!-- CASAS -->
+    <section id="casas" class="section">
+        <h2 class="section-title">Casas de Hogwarts</h2>
+        <div class="houses-grid">
+            <div class="house gryffindor">🦁 Gryffindor</div>
+            <div class="house slytherin">🐍 Slytherin</div>
+            <div class="house ravenclaw">🦅 Ravenclaw</div>
+            <div class="house hufflepuff">🦡 Hufflepuff</div>
+        </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section id="video" class="section video-section">
+        <h2 class="section-title">Trailer Mágico</h2>
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/NMYRd7DvjrE" title="Harry Potter - Regreso a Hogwarts"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+
+    <!-- MAGIA -->
+    <section id="magia" class="section magic">
+        <h2 class="section-title">Lanza un Hechizo ✨</h2>
+
+        <div class="wand-area">
+            <div id="wand"></div>
+            <div id="spark-container"></div>
+        </div>
+
+        <button class="spell-btn" onclick="castSpell()">✨ Lanzar hechizo</button>
+    </section>
+
+    <script src="./Js/app.js"></script>
+</body>
+
+</html>
